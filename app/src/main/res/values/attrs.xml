@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ScrollBarContainer">
+        <attr name="fsv_touch_zone_width" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="BlindSwipeRefreshLayout">
+        <attr name="bswr_left_offset" format="dimension" />
+        <attr name="bswr_top_offset" format="dimension" />
+        <attr name="bswr_right_offset" format="dimension" />
+        <attr name="bswr_bottom_offset" format="dimension" />
+    </declare-styleable>
+
+</resources>

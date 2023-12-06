@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ru.ozh.sample.scroller.view.BlindSwipeRefreshLayout
+        android:id="@+id/list_swr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:bswr_right_offset="40dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:itemCount="10"
+                tools:listitem="@layout/list_item_controller_word" />
+
+            <ru.ozh.sample.scroller.view.ScrollBarContainer
+                android:id="@+id/list_fast_scroller"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:clipChildren="false"
+                android:visibility="gone"
+                app:fsv_touch_zone_width="20dp">
+
+                <TextView
+                    android:id="@+id/scroll_bar_container_badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_toStartOf="@+id/scroll_bar_container_scroll_bar"
+                    android:background="@drawable/bg_scroll_container_badge"
+                    android:gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/scroll_bar_container_scroll_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:contentDescription="content_description"
+                    android:paddingEnd="5dp"
+                    android:src="@drawable/bg_scroll_container_scroll_bar" />
+            </ru.ozh.sample.scroller.view.ScrollBarContainer>
+
+        </FrameLayout>
+
+    </ru.ozh.sample.scroller.view.BlindSwipeRefreshLayout>
+
+</FrameLayout>
